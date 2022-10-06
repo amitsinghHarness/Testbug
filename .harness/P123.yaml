@@ -1,0 +1,27 @@
+pipeline:
+  name: P123
+  identifier: P123
+  projectIdentifier: Amit123
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: A23
+        identifier: A23
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: as2
+                  identifier: as2
+                  template:
+                    templateRef: account.stepMohitApprval
+                    versionLabel: v2
+                    templateInputs:
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+        tags: {}
