@@ -1,0 +1,24 @@
+template:
+  name: AccountStage
+  identifier: AccountStage
+  versionLabel: v2
+  type: Stage
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: a334
+              identifier: a334
+              template:
+                templateRef: account.AccountStep
+                versionLabel: v2
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
